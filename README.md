@@ -1,10 +1,11 @@
-# The lightweight RubyOnRails container
+# The RubyOnRails container
 
 ## Features
-- Lightweight (just 86 MB of dependencies)
-- The Fastest Build and Rebuild (~10 secs.)
-- Configurable for any rails environments / docker environment
-- Uses Postgresql by default (but you can add Mysql or anything you want)
+- Nokogiri
+- Postgres
+- Imagemagic
+- Nodejs
+- Tzdata
 
 ## How to work:
 
@@ -16,11 +17,6 @@ FROM itsnikolay/rails-alpine
 
 ENV APP_HOME /rails_app
 ENV RAILS_ENV production
-
-# If you need to install imagemagick:
-RUN apk add --update \
-   imagemagick \
-   && rm -rf /var/cache/apk/*
 
 ADD . $APP_HOME
 WORKDIR $APP_HOME
@@ -60,5 +56,3 @@ chmod +x docker-entrypoint.sh
 docker-compose up
 ```
 Enjoy!
-
-TIP: Use `gem "therubyracer"` instead of `nodejs` to keep your container lite
