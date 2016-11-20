@@ -7,7 +7,6 @@ RUN apk add --update \
   postgresql-dev \
   imagemagick-dev \
   nodejs \
-  tzdata \
   && rm -rf /var/cache/apk/*
 
 # Use libxml2, libxslt a packages from alpine for building nokogiri
