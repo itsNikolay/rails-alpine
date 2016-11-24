@@ -20,8 +20,7 @@ ENV RAILS_ENV production
 
 ADD . $APP_HOME
 WORKDIR $APP_HOME
-ENTRYPOINT docker-entrypoint.sh
-RUN rm -rf .git
+ENTRYPOINT ["./docker-entrypoint.sh"]
 ```
 
 docker-entrypoint.sh
@@ -39,11 +38,13 @@ docker-compose.yml
 ```yml
 version: '2'
 services:
+
   rails_app:
     build: .
-    command: bundle exec puma -C config/puma.rb
+    command: bundle exec rails server
     volumes_from:
       - rails_busybox
+
   rails_busybox:
     image: busybox
     volumes:
