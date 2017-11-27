@@ -6,6 +6,7 @@
 - Imagemagic
 - Nodejs
 - Tzdata
+- Libmagic
 
 ## How to work:
 
