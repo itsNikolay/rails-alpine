@@ -8,6 +8,7 @@
 - Tzdata
 - Libmagic
 - File-dev
+- Sqlite
 
 ## How to work:
 
