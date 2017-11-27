@@ -7,6 +7,7 @@
 - Nodejs
 - Tzdata
 - Libmagic
+- File-dev
 
 ## How to work:
 
