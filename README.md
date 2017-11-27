@@ -9,6 +9,7 @@
 - Libmagic
 - File-dev
 - Sqlite
+- Ruby-tzinfo
 
 ## How to work:
 

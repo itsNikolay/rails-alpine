@@ -9,6 +9,7 @@ RUN apk add --update \
   libmagic \
   file-dev \
   sqlite-dev \
+  ruby-tzinfo \
   && rm -rf /var/cache/apk/*
 
 # Use libxml2, libxslt a packages from alpine for building nokogiri
